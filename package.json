@@ -1,6 +1,6 @@
 {
   "name": "@aipmorg/chat-plugin-sdk",
-  "version": "1.32.3",
+  "version": "1.32.4",
   "description": "AiPM Chat Plugin SDK, help you to build an amazing chat plugin for AiPM Chat",
   "keywords": [
     "aipmhub",
@@ -86,9 +86,9 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@aipmorg/lint": "latest",
     "@commitlint/cli": "^18",
     "@lobehub/i18n-cli": "^1.10.0",
-    "@aipmorg/lint": "latest",
     "@testing-library/react": "^14.1.2",
     "@types/lodash-es": "^4",
     "@types/node": "^20",
