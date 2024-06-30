@@ -6,17 +6,17 @@ group: 服务端
 nav: API
 order: 100
 apiHeader:
-  pkg: '@lobehub/chat-plugin-sdk'
+  pkg: '@aipmorg/chat-plugin-sdk'
 ---
 
-LobeChat 在插件服务请求中所有的错误类型，包括业务语义错误、客户端错误和服务端错误。
+AiPMChat 在插件服务请求中所有的错误类型，包括业务语义错误、客户端错误和服务端错误。
 
 ## 使用方式
 
 搭配 `createErrorResponse` 使用：
 
 ```ts
-import { PluginErrorType } from '@lobehub/chat-plugin-sdk';
+import { PluginErrorType } from '@aipmorg/chat-plugin-sdk';
 
 export default async (req: Request) => {
   if (req.method !== 'POST') return createErrorResponse(PluginErrorType.MethodNotAllowed);

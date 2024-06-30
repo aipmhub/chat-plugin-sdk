@@ -1,6 +1,6 @@
 ---
 title: 更新日志
-description: New updates and improvements to @lobehub/chat-plugin-sdk
+description: New updates and improvements to @aipmorg/chat-plugin-sdk
 nav:
   title: 更新日志
   order: 999

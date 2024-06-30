@@ -1,16 +1,16 @@
 ---
 title: useWatchPluginMessage
-description: 监听获取 LobeChat 发过来的插件消息
+description: 监听获取 AiPMChat 发过来的插件消息
 nav: API
 order: 1
 group:
   title: Hooks
   order: 10
 apiHeader:
-  pkg: '@lobehub/chat-plugin-sdk/client'
+  pkg: '@aipmorg/chat-plugin-sdk/client'
 ---
 
-`useWatchPluginMessage` 是 Chat Plugin SDK 封装一个的 React Hook，用于监听从 LobeChat 发过来的插件消息。
+`useWatchPluginMessage` 是 Chat Plugin SDK 封装一个的 React Hook，用于监听从 AiPMChat 发过来的插件消息。
 
 ## 语法
 
@@ -21,7 +21,7 @@ const { data, loading } = useWatchPluginMessage<T>();
 ## 示例
 
 ```tsx | pure
-import { useWatchPluginMessage } from '@lobehub/chat-plugin-sdk/client';
+import { useWatchPluginMessage } from '@aipmorg/chat-plugin-sdk/client';
 
 const Demo = () => {
   const { data, loading } = useWatchPluginMessage();

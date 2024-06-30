@@ -1,6 +1,6 @@
 /**
- * Lobe Chat Plugins
- * @desc Lobe Chat Plugins interface
+ * AiPM Chat Plugins
+ * @desc AiPM Chat Plugins interface
  * @nameCN 插件列表
  * @descCN 插件市场的列表接口
  */

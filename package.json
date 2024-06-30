@@ -1,25 +1,25 @@
 {
-  "name": "@lobehub/chat-plugin-sdk",
+  "name": "@aipmorg/chat-plugin-sdk",
   "version": "1.32.3",
-  "description": "Lobe Chat Plugin SDK, help you to build an amazing chat plugin for Lobe Chat",
+  "description": "AiPM Chat Plugin SDK, help you to build an amazing chat plugin for AiPM Chat",
   "keywords": [
-    "lobehub",
+    "aipmhub",
     "sdk",
     "chatgpt",
     "openai",
     "plugin",
     "chat-plugin"
   ],
-  "homepage": "https://github.com/lobehub/chat-plugin-sdk",
+  "homepage": "https://github.com/aipmhub/chat-plugin-sdk",
   "bugs": {
-    "url": "https://github.com/lobehub/chat-plugin-sdk/issues/new"
+    "url": "https://github.com/aipmhub/chat-plugin-sdk/issues/new"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lobehub/chat-plugin-sdk.git"
+    "url": "https://github.com/aipmhub/chat-plugin-sdk.git"
   },
   "license": "MIT",
-  "author": "LobeHub <i@lobehub.com>",
+  "author": "AiPMHub <nextprofessionalpower@gmail.com>",
   "sideEffects": false,
   "main": "./lib/index.js",
   "module": "./es/index.js",
@@ -88,7 +88,7 @@
   "devDependencies": {
     "@commitlint/cli": "^18",
     "@lobehub/i18n-cli": "^1.10.0",
-    "@lobehub/lint": "latest",
+    "@aipmorg/lint": "latest",
     "@testing-library/react": "^14.1.2",
     "@types/lodash-es": "^4",
     "@types/node": "^20",

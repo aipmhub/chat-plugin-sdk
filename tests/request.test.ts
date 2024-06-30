@@ -3,7 +3,7 @@ import {
   createHeadersWithPluginSettings,
   getPluginSettingsFromHeaders,
   getPluginSettingsFromRequest,
-} from '@lobehub/chat-plugin-sdk';
+} from '@aipmorg/chat-plugin-sdk';
 import { describe, expect, it } from 'vitest';
 
 describe('getPluginSettingsFromRequest', () => {

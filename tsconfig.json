@@ -17,8 +17,8 @@
     "strict": true,
     "paths": {
       "@/*": ["src/*"],
-      "@lobehub/chat-plugin-sdk": ["src"],
-      "@lobehub/chat-plugin-sdk/*": ["src/*", "*"]
+      "@aipmorg/chat-plugin-sdk": ["src"],
+      "@aipmorg/chat-plugin-sdk/*": ["src/*", "*"]
     },
     "types": ["vitest/globals"]
   },

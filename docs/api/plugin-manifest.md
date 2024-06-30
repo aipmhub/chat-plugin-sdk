@@ -13,7 +13,7 @@ nav: API
 ### Usage Example
 
 ```typescript
-import { pluginManifestSchema } from '@lobehub/chat-plugin-sdk';
+import { pluginManifestSchema } from '@aipmorg/chat-plugin-sdk';
 
 const manifestData = {
   api: [
@@ -74,7 +74,7 @@ export default pluginApiSchema;
 ### Usage Example
 
 ```typescript
-import { pluginApiSchema } from '@lobehub/chat-plugin-sdk';
+import { pluginApiSchema } from '@aipmorg/chat-plugin-sdk';
 
 const apiData = {
   description: 'API Description',

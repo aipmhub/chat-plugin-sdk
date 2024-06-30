@@ -1,12 +1,12 @@
 ---
-title: LobeChat Plugin Types
+title: AiPMChat Plugin Types
 group: Concepts
 order: 2
 ---
 
-# LobeChat Plugin Types
+# AiPMChat Plugin Types
 
-LobeChat's plugin mechanism provides developers with powerful extension capabilities, allowing custom functions and interactions to be embedded in chats. Currently, LobeChat supports three types of plugins: `default`, `markdown`, and `standalone`. Here is a brief introduction to these three types of plugins:
+AiPMChat's plugin mechanism provides developers with powerful extension capabilities, allowing custom functions and interactions to be embedded in chats. Currently, AiPMChat supports three types of plugins: `default`, `markdown`, and `standalone`. Here is a brief introduction to these three types of plugins:
 
 ## Default Plugin
 
@@ -32,7 +32,7 @@ The `markdown` plugin type allows plugins to return content in Markdown format d
 
 The `standalone` plugin type is designed to support complex interactions. These plugins can fully control the interaction logic and run in the form of independent applications. They are suitable for scenarios that require rich user interaction, such as form filling, games, or other multi-step operations. `Standalone` plugins can decide whether to trigger AI messages on their own, and can even trigger AI replies programmatically.
 
-The `standalone` type of plugin is the biggest difference between LobeChat and ChatGPT plugin systems. It is because of the existence of this type of plugin that we can achieve more complex conversation interaction experiences through plugins.
+The `standalone` type of plugin is the biggest difference between AiPMChat and ChatGPT plugin systems. It is because of the existence of this type of plugin that we can achieve more complex conversation interaction experiences through plugins.
 
 For example, the officially implemented clock plugin is a standard Standalone plugin, which is characterized by not containing any backend API and being implemented purely on the frontend.
 
@@ -40,7 +40,7 @@ For example, the officially implemented clock plugin is a standard Standalone pl
 
 ## How to Choose
 
-When developing LobeChat plugins, choosing the correct plugin type is crucial to achieving the expected user experience. Here is a guide to help you choose the most suitable plugin type based on different scenarios and requirements.
+When developing AiPMChat plugins, choosing the correct plugin type is crucial to achieving the expected user experience. Here is a guide to help you choose the most suitable plugin type based on different scenarios and requirements.
 
 ### Default Plugin
 
@@ -78,4 +78,4 @@ When choosing a plugin type, consider the complexity of user interaction, the de
 
 ## Summary
 
-Through these three types of plugins, LobeChat provides developers with flexible choices for plugin development, covering chat experiences from simple display to complex interaction. As a developer, you can choose the most suitable plugin type for development based on your own needs and scenarios, to enhance user interaction and satisfaction.
+Through these three types of plugins, AiPMChat provides developers with flexible choices for plugin development, covering chat experiences from simple display to complex interaction. As a developer, you can choose the most suitable plugin type for development based on your own needs and scenarios, to enhance user interaction and satisfaction.

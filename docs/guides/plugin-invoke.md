@@ -1,13 +1,13 @@
 ---
 title: Plugin Invoking Mechanism
-description: How to Trigger LobeChat Plugins through Function Call
+description: How to Trigger AiPMChat Plugins through Function Call
 group: Concepts
 order: 3
 ---
 
-# LobeChat Plugin Invoking Mechanism
+# AiPMChat Plugin Invoking Mechanism
 
-The LobeChat plugin system triggers plugins through the [Function Call mechanism](https://sspai.com/post/81986), enabling chatbots to interact with external APIs to enhance user experience. The following is a detailed explanation of the plugin triggering process.
+The AiPMChat plugin system triggers plugins through the [Function Call mechanism](https://sspai.com/post/81986), enabling chatbots to interact with external APIs to enhance user experience. The following is a detailed explanation of the plugin triggering process.
 
 ## Basic Principles of Function Call
 
@@ -15,12 +15,12 @@ Function Call is a new feature that allows developers to describe functions with
 
 ## Plugin Trigger Steps
 
-1. **User Input**: The user makes a request to LobeChat, such as querying the weather or adding a to-do item.
+1. **User Input**: The user makes a request to AiPMChat, such as querying the weather or adding a to-do item.
 2. **Intent Recognition**: The model analyzes the user's input to determine if a plugin needs to be invoked to handle the request.
 3. **Generate Function Call**: If a plugin intervention is required, the model generates a Function Call request containing the necessary parameters.
-4. **Send Request**: LobeChat sends the Function Call as an API request to the designated plugin server.
+4. **Send Request**: AiPMChat sends the Function Call as an API request to the designated plugin server.
 5. **Process Request**: The plugin server receives the Function Call request, processes it, and prepares response data.
-6. **Return Response**: The plugin server returns the processed data to LobeChat in JSON format.
+6. **Return Response**: The plugin server returns the processed data to AiPMChat in JSON format.
 7. **Model Processes Plugin Response**: The model receives the plugin's response data and continues interacting with the user based on this data.
 
 ## Example Process: Weather Forecast Plugin
@@ -29,7 +29,7 @@ Here is a detailed process for triggering a weather forecast plugin, including J
 
 ### 1. User Inquiry
 
-The user makes the following request to LobeChat:
+The user makes the following request to AiPMChat:
 
 ```json
 {
@@ -55,9 +55,9 @@ The model recognizes that the user wants to know the weather for tomorrow and ge
 }
 ```
 
-### 3. LobeChat Sends API Request
+### 3. AiPMChat Sends API Request
 
-LobeChat converts the above Function Call into an API request to the weather forecast plugin:
+AiPMChat converts the above Function Call into an API request to the weather forecast plugin:
 
 ```http
 POST /weather-forecast HTTP/1.1
@@ -109,9 +109,9 @@ The user sees the model's response and prepares accordingly based on the advice.
 ## Considerations
 
 - The design of Function Call needs to accurately reflect the user's intent and the required parameters.
-- Plugins must be able to securely and efficiently handle requests from LobeChat and provide accurate responses.
-- In the latest implementation of OpenAI, Function Call has been updated to tool_calls. LobeChat has completed compatibility adaptation to accommodate the new implementation.
+- Plugins must be able to securely and efficiently handle requests from AiPMChat and provide accurate responses.
+- In the latest implementation of OpenAI, Function Call has been updated to tool_calls. AiPMChat has completed compatibility adaptation to accommodate the new implementation.
 
 ## Conclusion
 
-The Function Call mechanism provides a flexible and efficient tool triggering mechanism for LobeChat plugins, enabling the LobeChat assistant to interact with external services in a more intelligent manner. This mechanism not only enhances user experience but also provides developers with vast innovation opportunities.
+The Function Call mechanism provides a flexible and efficient tool triggering mechanism for AiPMChat plugins, enabling the AiPMChat assistant to interact with external services in a more intelligent manner. This mechanism not only enhances user experience but also provides developers with vast innovation opportunities.

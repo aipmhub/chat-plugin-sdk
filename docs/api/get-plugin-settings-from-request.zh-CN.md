@@ -5,7 +5,7 @@ group:
   title: 服务端
   order: 1
 apiHeader:
-  pkg: '@lobehub/chat-plugin-sdk'
+  pkg: '@aipmorg/chat-plugin-sdk'
 ---
 
 用于从请求中获取插件设置字符串。
@@ -32,7 +32,7 @@ const settings = getPluginSettingsFromRequest<T>(req: Request): T | undefined;
 import {
   createHeadersWithPluginSettings,
   getPluginSettingsFromRequest,
-} from '@lobehub/chat-plugin-sdk';
+} from '@aipmorg/chat-plugin-sdk';
 
 const req = new Request('https://api.example.com', {
   headers: createHeadersWithPluginSettings({ theme: 'dark' }),

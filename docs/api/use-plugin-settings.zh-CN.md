@@ -4,7 +4,7 @@ description: 用于管理插件 Settings
 nav: API
 order: 12
 apiHeader:
-  pkg: '@lobehub/chat-plugin-sdk/client'
+  pkg: '@aipmorg/chat-plugin-sdk/client'
 group: Hooks
 ---
 
@@ -29,7 +29,7 @@ const [value, updateValue] = usePluginSettings<T>(initialValue);
 ## 示例
 
 ```tsx | pure
-import { usePluginSettings } from '@lobehub/chat-plugin-sdk/client';
+import { usePluginSettings } from '@aipmorg/chat-plugin-sdk/client';
 
 const Demo = () => {
   const [value, updateValue] = usePluginSettings('default value');
@@ -53,4 +53,4 @@ export default Demo;
 
 - 请确保 `usePluginSettings` 在 React 函数组件内部使用。
 - 初始值 `initialValue` 可以是任意类型的值。
-- 更新插件设置时，会自动调用 `postToUpdatePluginSettings` 方法向 LobeChat 发送更新消息。
+- 更新插件设置时，会自动调用 `postToUpdatePluginSettings` 方法向 AiPMChat 发送更新消息。

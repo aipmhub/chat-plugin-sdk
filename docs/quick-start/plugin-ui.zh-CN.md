@@ -6,7 +6,7 @@ order: 3
 
 # 插件 UI 界面
 
-对于 LobeChat 插件而言，UI 界面是一个可选项。例如 [「网页内容提取」插件](https://github.com/lobehub/chat-plugin-web-crawler) 就没有实现相应的用户界面。
+对于 AiPMChat 插件而言，UI 界面是一个可选项。例如 [「网页内容提取」插件](https://github.com/lobehub/chat-plugin-web-crawler) 就没有实现相应的用户界面。
 
 ![](https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265263241-0e765fdc-3463-4c36-a398-aef177a30df9.png)
 
@@ -16,7 +16,7 @@ order: 3
 
 ## UI 界面实现
 
-LobeChat 通过 `iframe` + `postMessage` 实现插件 ui 的加载与通信。因此， 插件 UI 的实现方式与普通的网页开发一致，你可以使用任何你熟悉的前端框架与开发语言。
+AiPMChat 通过 `iframe` + `postMessage` 实现插件 ui 的加载与通信。因此， 插件 UI 的实现方式与普通的网页开发一致，你可以使用任何你熟悉的前端框架与开发语言。
 
 ![](https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265263653-4ea87abc-249a-49f3-a241-7ed93ddb1ddf.png)
 
@@ -24,14 +24,14 @@ LobeChat 通过 `iframe` + `postMessage` 实现插件 ui 的加载与通信。�
 
 ## 插件通信
 
-其中关于插件通信，我们提供了两个方法实现插件与 LobeChat 主体的双向通信。
+其中关于插件通信，我们提供了两个方法实现插件与 AiPMChat 主体的双向通信。
 
 ### 插件主动请求
 
-你可以通过 [lobeChat](/api/lobe-chat-client) 的 `getPluginMessage` 方法主动向 LobeChat 获取当前消息的数据。
+你可以通过 [lobeChat](/api/lobe-chat-client) 的 `getPluginMessage` 方法主动向 AiPMChat 获取当前消息的数据。
 
 ```tsx | pure
-import { lobeChat } from '@lobehub/chat-plugin-sdk/client';
+import { lobeChat } from '@aipmorg/chat-plugin-sdk/client';
 import { memo, useEffect, useState } from 'react';
 
 import { ResponseData } from '@/type';
@@ -40,7 +40,7 @@ const Render = memo(() => {
   const [data, setData] = useState<ResponseData>();
 
   useEffect(() => {
-    // 从 LobeChat 获取当前插件的消息
+    // 从 AiPMChat 获取当前插件的消息
     lobeChat.getPluginMessage().then((e: ResponseData) => {
       setData(e);
     });
@@ -56,12 +56,12 @@ export default Render;
 `lobeChat.getPluginMessage` 方法是一个普通的异步请求方法，因此可以搭配 `swr` 或 `react-query` 实现数据的缓存与自动更新，达到更加优良的用户体验。
 :::
 
-### 接受 LobeChat 推送
+### 接受 AiPMChat 推送
 
-你可以通过 [useWatchPluginMessage](/api/use-watch-plugin-message) 方法订阅 LobeChat 向插件发送的消息。
+你可以通过 [useWatchPluginMessage](/api/use-watch-plugin-message) 方法订阅 AiPMChat 向插件发送的消息。
 
 ```tsx | pure
-import { useWatchPluginMessage } from '@lobehub/chat-plugin-sdk/client';
+import { useWatchPluginMessage } from '@aipmorg/chat-plugin-sdk/client';
 
 const Demo = () => {
   const { data, loading } = useWatchPluginMessage();

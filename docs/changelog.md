@@ -1,6 +1,6 @@
 ---
 title: Changelog
-description: New updates and improvements to @lobehub/chat-plugin-sdk
+description: New updates and improvements to @aipmorg/chat-plugin-sdk
 nav:
   title: Changelog
   order: 999

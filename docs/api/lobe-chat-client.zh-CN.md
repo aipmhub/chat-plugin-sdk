@@ -1,17 +1,17 @@
 ---
 title: lobeChat
-description: LobeChat 插件客户端 SDK 实例
+description: AiPMChat 插件客户端 SDK 实例
 group:
   title: 客户端
   order: 10
 apiHeader:
-  pkg: '@lobehub/chat-plugin-sdk/client'
+  pkg: '@aipmorg/chat-plugin-sdk/client'
 ---
 
-该实例包含插件侧与 LobeChat 交互的所有关键方法。
+该实例包含插件侧与 AiPMChat 交互的所有关键方法。
 
 - 该实例的所有方法均使用了浏览器的 `postMessage` 和 `addEventListener` 方法，因此需要在浏览器环境中使用；
-- 该函数的所有方法均通过 `postMessage` 向父窗口发送消息，因此插件必须嵌入在 LobeChat 中才能返回正确的消息；
+- 该函数的所有方法均通过 `postMessage` 向父窗口发送消息，因此插件必须嵌入在 AiPMChat 中才能返回正确的消息；
 
 ## getPluginPayload
 
@@ -36,7 +36,7 @@ type GetPluginPayload = <T = any>() => Promise<PluginPayload<T>>;
 #### 示例
 
 ```ts
-import { lobeChat } from '@lobehub/chat-plugin-sdk/client';
+import { lobeChat } from '@aipmorg/chat-plugin-sdk/client';
 
 lobeChat.getPluginPayload().then((payload) => {
   console.log(payload);
@@ -54,7 +54,7 @@ lobeChat.getPluginPayload().then((payload) => {
 
 用于获取插件消息的内容（`content` 字段）。
 
-LobeChat 将插件返回的消息对象序列化后存储在 `content` 字段中，该方法将会获取该字段的内容，并反序列化为 JSON 对象。
+AiPMChat 将插件返回的消息对象序列化后存储在 `content` 字段中，该方法将会获取该字段的内容，并反序列化为 JSON 对象。
 
 ```ts
 type GetPluginMessage = <T = object>() => Promise<T>;
@@ -63,7 +63,7 @@ type GetPluginMessage = <T = object>() => Promise<T>;
 #### 示例
 
 ```ts | pure
-import { lobeChat } from '@lobehub/chat-plugin-sdk/client';
+import { lobeChat } from '@aipmorg/chat-plugin-sdk/client';
 
 lobeChat.getPluginMessage().then((message) => {
   console.log(message);
@@ -72,7 +72,7 @@ lobeChat.getPluginMessage().then((message) => {
 
 ## setPluginMessage
 
-该方法用于向 LobeChat 发送消息以更新插件消息的内容。 内容将会序列化后，发送给 LobeChat，并继续会话流程。
+该方法用于向 AiPMChat 发送消息以更新插件消息的内容。 内容将会序列化后，发送给 AiPMChat，并继续会话流程。
 
 ```ts
 type SetPluginMessage = <T = object>(content: T) => Promise<void>;
@@ -85,7 +85,7 @@ type SetPluginMessage = <T = object>(content: T) => Promise<void>;
 #### 示例
 
 ```ts
-import { lobeChat } from '@lobehub/chat-plugin-sdk/client';
+import { lobeChat } from '@aipmorg/chat-plugin-sdk/client';
 
 lobeChat.setPluginMessage({ title: 'Hello', message: 'Welcome to my plugin' });
 ```
@@ -105,7 +105,7 @@ type GetPluginState = <T = any>(key: string) => Promise<T>;
 #### 示例
 
 ```ts
-import { lobeChat } from '@lobehub/chat-plugin-sdk/client';
+import { lobeChat } from '@aipmorg/chat-plugin-sdk/client';
 
 lobeChat.getPluginState('counter').then((state) => {
   console.log(state);
@@ -128,14 +128,14 @@ type SetPluginState = (key: string, value: any) => Promise<void>;
 #### 示例
 
 ```ts
-import { lobeChat } from '@lobehub/chat-plugin-sdk/client';
+import { lobeChat } from '@aipmorg/chat-plugin-sdk/client';
 
 lobeChat.setPluginState('counter', 5);
 ```
 
 ## getPluginSettings
 
-用于获取插件在 LobeChat 中存储的配置信息。
+用于获取插件在 AiPMChat 中存储的配置信息。
 
 ```ts
 type GetPluginSettings = <T = any>() => Promise<T>;
@@ -144,7 +144,7 @@ type GetPluginSettings = <T = any>() => Promise<T>;
 #### 示例
 
 ```ts
-import { lobeChat } from '@lobehub/chat-plugin-sdk/client';
+import { lobeChat } from '@aipmorg/chat-plugin-sdk/client';
 
 lobeChat.getPluginSettings().then((state) => {
   console.log(state);
@@ -166,7 +166,7 @@ type SetPluginSettings<T> = (settings: Partial<T>) => Promise<void>;
 #### 示例
 
 ```ts
-import { lobeChat } from '@lobehub/chat-plugin-sdk/client';
+import { lobeChat } from '@aipmorg/chat-plugin-sdk/client';
 
 lobeChat.setPluginSettings({ theme: 'dark', fontSize: 12 });
 ```

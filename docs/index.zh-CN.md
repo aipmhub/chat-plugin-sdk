@@ -6,7 +6,7 @@ hero:
   actions:
     - text: GitHub
       openExternal: true
-      link: https://github.com/lobehub/chat-plugin-sdk
+      link: https://github.com/aipmhub/chat-plugin-sdk
     - text: 立即开始
       link: /zh-CN/quick-start/intro
       type: primary

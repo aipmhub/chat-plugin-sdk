@@ -10,7 +10,7 @@ The server only needs to implement the API interfaces described in the manifest.
 
 ## API Implementation
 
-For the Edge Runtime, we provide the `createErrorResponse` method in `@lobehub/chat-plugin-sdk` to quickly return error responses. Currently, the provided error types can be found in [PluginErrorType](/api/error).
+For the Edge Runtime, we provide the `createErrorResponse` method in `@aipmorg/chat-plugin-sdk` to quickly return error responses. Currently, the provided error types can be found in [PluginErrorType](/api/error).
 
 The implementation of the "clothes" interface in the template is as follows:
 
@@ -36,21 +36,21 @@ Where `manClothes` and `womanClothes` are hard-coded mock data and can be replac
 
 ## Gateway
 
-Since LobeChat's default plugin gateway is a cloud service (<https://chat.lobehub.com/api/plugins>), the cloud service sends requests to the API address specified in the manifest to address cross-origin issues.
+Since AiPMChat's default plugin gateway is a cloud service (<https://chat.lobehub.com/api/plugins>), the cloud service sends requests to the API address specified in the manifest to address cross-origin issues.
 
-For custom plugins, the plugin requests need to be sent to the local service. Therefore, by specifying the gateway in the manifest (<http://localhost:3400/api/gateway>), LobeChat will directly request this address, and then only a gateway implementation needs to be created at that address.
+For custom plugins, the plugin requests need to be sent to the local service. Therefore, by specifying the gateway in the manifest (<http://localhost:3400/api/gateway>), AiPMChat will directly request this address, and then only a gateway implementation needs to be created at that address.
 
 ```ts
-import { createLobeChatPluginGateway } from '@lobehub/chat-plugins-gateway';
+import { createAiPMChatPluginGateway } from '@aipmorg/chat-plugins-gateway';
 
 export const config = {
   runtime: 'edge',
 };
 
-export default async createLobeChatPluginGateway();
+export default async createAiPMChatPluginGateway();
 ```
 
-The [`@lobehub/chat-plugins-gateway`](https://github.com/lobehub/chat-plugins-gateway) contains the [implementation](https://github.com/lobehub/lobe-chat/blob/main/src/pages/api/plugins.api.ts) of the plugin gateway in LobeChat. You can directly use this package to create a gateway, allowing LobeChat to access the local plugin service.
+The [`@aipmorg/chat-plugins-gateway`](https://github.com/lobehub/chat-plugins-gateway) contains the [implementation](https://github.com/lobehub/lobe-chat/blob/main/src/pages/api/plugins.api.ts) of the plugin gateway in AiPMChat. You can directly use this package to create a gateway, allowing AiPMChat to access the local plugin service.
 
 ## Other Server-Side Implementation Examples
 
@@ -61,4 +61,4 @@ As the server-side support for plugins allows for implementation in any framewor
 
 ## Support for OpenAPI Manifest
 
-In addition to using the API field to define the plugin's server, we also plan to support the OpenAPI specification to describe the plugin's functionality. This will make it more convenient to use existing OpenAPI tools to define plugin services. This capability will be tracked in [lobehub/chat-plugin-sdk#13](https://github.com/lobehub/chat-plugin-sdk/issues/13).
+In addition to using the API field to define the plugin's server, we also plan to support the OpenAPI specification to describe the plugin's functionality. This will make it more convenient to use existing OpenAPI tools to define plugin services. This capability will be tracked in [lobehub/chat-plugin-sdk#13](https://github.com/aipmhub/chat-plugin-sdk/issues/13).

@@ -1,16 +1,16 @@
 ---
 title: useWatchPluginMessage
-description: used to listen for plugin messages sent from LobeChat
+description: used to listen for plugin messages sent from AiPMChat
 nav: API
 order: 1
 group:
   title: Hooks
   order: 10
 apiHeader:
-  pkg: '@lobehub/chat-plugin-sdk/client'
+  pkg: '@aipmorg/chat-plugin-sdk/client'
 ---
 
-`useWatchPluginMessage`This is a React Hook encapsulating the Chat Plugin SDK, used to listen for plugin messages sent from LobeChat.
+`useWatchPluginMessage`This is a React Hook encapsulating the Chat Plugin SDK, used to listen for plugin messages sent from AiPMChat.
 
 ## Syntax
 
@@ -21,7 +21,7 @@ const { data, loading } = useWatchPluginMessage<T>();
 ## Examples
 
 ```tsx | pure
-import { useWatchPluginMessage } from '@lobehub/chat-plugin-sdk/client';
+import { useWatchPluginMessage } from '@aipmorg/chat-plugin-sdk/client';
 
 const Demo = () => {
   const { data, loading } = useWatchPluginMessage();

@@ -4,7 +4,7 @@ description: 监听插件初始化事件
 nav: API
 order: 10
 apiHeader:
-  pkg: '@lobehub/chat-plugin-sdk/client'
+  pkg: '@aipmorg/chat-plugin-sdk/client'
 group: Hooks
 ---
 
@@ -25,7 +25,7 @@ useOnStandalonePluginInit<T>(callback: (payload: PluginPayload<T>) => void): voi
 ## 示例
 
 ```tsx | pure
-import { useOnStandalonePluginInit } from '@lobehub/chat-plugin-sdk/client';
+import { useOnStandalonePluginInit } from '@aipmorg/chat-plugin-sdk/client';
 
 const Demo = () => {
   useOnStandalonePluginInit((payload) => {

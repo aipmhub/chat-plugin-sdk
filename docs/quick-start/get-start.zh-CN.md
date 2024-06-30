@@ -6,7 +6,7 @@ order: 1
 
 # 3 分钟快速上手
 
-本篇将会介绍如何在 LobeChat 中快速添加和使用一个自定义插件。
+本篇将会介绍如何在 AiPMChat 中快速添加和使用一个自定义插件。
 
 ## 1. 创建并启动插件项目
 
@@ -23,9 +23,9 @@ $ npm run dev
 
 ![](https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265259526-9ef25272-4312-429b-93bc-a95515727ed3.png)
 
-## 2. 在 LobeChat 角色设置中添加本地插件
+## 2. 在 AiPMChat 角色设置中添加本地插件
 
-接下来进入到 LobeChat 中，创建一个新的助手，并进入它的会话设置页：
+接下来进入到 AiPMChat 中，创建一个新的助手，并进入它的会话设置页：
 
 ![](https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265259643-1a9cc34a-76f3-4ccf-928b-129654670efd.png)
 
@@ -55,6 +55,6 @@ $ npm run dev
 
 ![](https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265260461-c22ae797-2809-464b-96fc-d0c020f4807b.png)
 
-当完成这些操作后，你已经了解了添加自定义插件，并在 LobeChat 中使用的基础流程。
+当完成这些操作后，你已经了解了添加自定义插件，并在 AiPMChat 中使用的基础流程。
 
 [lobe-chat-plugin-template-url]: https://github.com/lobehub/chat-plugin-template

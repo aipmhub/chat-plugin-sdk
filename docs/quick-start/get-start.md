@@ -6,7 +6,7 @@ order: 1
 
 # Quick Start
 
-This article will introduce how to quickly add and use a custom plugin in LobeChat.
+This article will introduce how to quickly add and use a custom plugin in AiPMChat.
 
 ## 1. Create and launch the plugin project
 
@@ -23,9 +23,9 @@ When`ready started server on 0.0.0.0:3400, url: http://localhost:3400` is displa
 
 ![](https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265259526-9ef25272-4312-429b-93bc-a95515727ed3.png)
 
-## 2. Add a local plugin in LobeChat role settings
+## 2. Add a local plugin in AiPMChat role settings
 
-Next, go to LobeChat, create a new assistant, and go to its session settings page:
+Next, go to AiPMChat, create a new assistant, and go to its session settings page:
 
 ![](https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265259643-1a9cc34a-76f3-4ccf-928b-129654670efd.png)
 
@@ -55,6 +55,6 @@ After completing the answers, the assistant will initiate the plugin call, retri
 
 ![](https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265260461-c22ae797-2809-464b-96fc-d0c020f4807b.png)
 
-After completing these operations, you have learned the basic process of adding a custom plugin and using it in LobeChat.
+After completing these operations, you have learned the basic process of adding a custom plugin and using it in AiPMChat.
 
 [lobe-chat-plugin-template-url]: https://github.com/lobehub/chat-plugin-template

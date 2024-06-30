@@ -10,7 +10,7 @@ order: 1
 
 ## api 实现
 
-针对 Edge Runtime ，我们在 `@lobehub/chat-plugin-sdk` 提供了 `createErrorResponse` 方法，用于快速返回错误响应。目前提供的错误类型详见：[PluginErrorType](/api/error)。
+针对 Edge Runtime ，我们在 `@aipmorg/chat-plugin-sdk` 提供了 `createErrorResponse` 方法，用于快速返回错误响应。目前提供的错误类型详见：[PluginErrorType](/api/error)。
 
 模板中的 clothes 接口实现如下：
 
@@ -36,21 +36,21 @@ export default async (req: Request) => {
 
 ## gateway
 
-由于 LobeChat 默认的插件网关是云端服务（<https://chat-preview.lobehub.com/api/plugins/gateway>），云端服务通过 manifest 上的 api 地址发送请求，以解决跨域问题。
+由于 AiPMChat 默认的插件网关是云端服务（<https://chat-preview.lobehub.com/api/plugins/gateway>），云端服务通过 manifest 上的 api 地址发送请求，以解决跨域问题。
 
-而针对自定义插件，插件的请求需要发送给本地服务的， 因此通过在 manifest 中指定网关 (<http://localhost:3400/api/gateway>)，LobeChat 将会直接请求该地址，然后只需要在该地址下创建一个网关实现即可。
+而针对自定义插件，插件的请求需要发送给本地服务的， 因此通过在 manifest 中指定网关 (<http://localhost:3400/api/gateway>)，AiPMChat 将会直接请求该地址，然后只需要在该地址下创建一个网关实现即可。
 
 ```ts
-import { createLobeChatPluginGateway } from '@lobehub/chat-plugins-gateway';
+import { createAiPMChatPluginGateway } from '@aipmorg/chat-plugins-gateway';
 
 export const config = {
   runtime: 'edge',
 };
 
-export default async createLobeChatPluginGateway();
+export default async createAiPMChatPluginGateway();
 ```
 
-[`@lobehub/chat-plugins-gateway`](https://github.com/lobehub/chat-plugins-gateway) 包含了 LobeChat 中插件网关的[实现](https://github.com/lobehub/lobe-chat/blob/main/src/pages/api/plugins.api.ts)，你可以直接使用该包创建网关，进而让 LobeChat 访问到本地的插件服务。
+[`@aipmorg/chat-plugins-gateway`](https://github.com/lobehub/chat-plugins-gateway) 包含了 AiPMChat 中插件网关的[实现](https://github.com/lobehub/lobe-chat/blob/main/src/pages/api/plugins.api.ts)，你可以直接使用该包创建网关，进而让 AiPMChat 访问到本地的插件服务。
 
 ## 其他服务端实现示例
 
@@ -61,4 +61,4 @@ export default async createLobeChatPluginGateway();
 
 ## 支持 OpenAPI Manifest
 
-除了使用 api 字段定义插件的服务端以外，我们还计划支持 OpenAPI 规范来描述插件的功能，这样可以更方便的使用已有的 OpenAPI 工具来形成插件服务。该能力将在[lobehub/chat-plugin-sdk#13](https://github.com/lobehub/chat-plugin-sdk/issues/13) 中跟进。
+除了使用 api 字段定义插件的服务端以外，我们还计划支持 OpenAPI 规范来描述插件的功能，这样可以更方便的使用已有的 OpenAPI 工具来形成插件服务。该能力将在[lobehub/chat-plugin-sdk#13](https://github.com/aipmhub/chat-plugin-sdk/issues/13) 中跟进。

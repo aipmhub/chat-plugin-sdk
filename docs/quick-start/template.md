@@ -44,11 +44,11 @@ You need to modify the project information based on the template. Since the temp
 
 - Replace the Title: Replace `Template` with your project name, for example, `Open Interpreter`.
 - Replace the Icon: Replace `package.webp` with the name of your project's icon. You can find a suitable icon on [emojipedia](https://emojipedia.org/), or use the URL of your logo directly.
-- Replace the Description: Replace `This is the plugin template for LobeChat plugin...` with a one-sentence introduction to your project.
+- Replace the Description: Replace `This is the plugin template for AiPMChat plugin...` with a one-sentence introduction to your project.
 - Replace the Feature Descriptions: Replace the feature section with descriptions of your project's features. You can use the \[Markdown Feature Description Expert] to help you quickly generate attractive feature descriptions.
 - Replace the Usage Instructions: Replace the usage section with instructions for using your project.
 
-After completing the above steps, you will have modified the basic information of the repository project and obtained a project introduction document consistent with the style and temperament of official LobeChat plugins.
+After completing the above steps, you will have modified the basic information of the repository project and obtained a project introduction document consistent with the style and temperament of official AiPMChat plugins.
 
 ### 3. Global Search and Replace Markers
 
@@ -58,7 +58,7 @@ Every plugin needs a globally unique identifier. In the template, we use `plugin
 
 ## Reference Projects
 
-Of course, you can use any development framework and language you are familiar with, as long as it can implement the functionality described in the manifest. In addition to the above template, you can also learn about plugin development based on LobeChat's official plugins:
+Of course, you can use any development framework and language you are familiar with, as long as it can implement the functionality described in the manifest. In addition to the above template, you can also learn about plugin development based on AiPMChat's official plugins:
 
 - [chat-plugin-realtime-weather](https://github.com/lobehub/chat-plugin-realtime-weather): Real-time weather plugin developed based on the Next.js framework.
 - [chat-plugin-search-engine](https://github.com/lobehub/chat-plugin-search-engine): Search engine plugin using Vercel Serverless Edge Runtime, with front-end development using System.js modular development.

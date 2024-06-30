@@ -1,18 +1,18 @@
 ---
 title: lobeChat
-description: LobeChat Client SDK
+description: AiPMChat Client SDK
 group:
   title: Client
   order: 10
 apiHeader:
-  pkg: '@lobehub/chat-plugin-sdk/client'
+  pkg: '@aipmorg/chat-plugin-sdk/client'
   nav: API
 ---
 
-This example contains all the key methods for the interaction between the plugin and LobeChat.
+This example contains all the key methods for the interaction between the plugin and AiPMChat.
 
 - All the methods in this example use the browser's `postMessage` and `addEventListener` methods, so they need to be used in a browser environment;
-- All methods of this function send messages to the parent window through `postMessage`so the plugin must be embedded in LobeChat to return the correct message;
+- All methods of this function send messages to the parent window through `postMessage`so the plugin must be embedded in AiPMChat to return the correct message;
 
 ## getPluginPayload
 
@@ -37,7 +37,7 @@ type GetPluginPayload = <T = any>() => Promise<PluginPayload<T>>;
 #### Example
 
 ```ts
-import { lobeChat } from '@lobehub/chat-plugin-sdk/client';
+import { lobeChat } from '@aipmorg/chat-plugin-sdk/client';
 
 lobeChat.getPluginPayload().then((payload) => {
   console.log(payload);
@@ -56,7 +56,7 @@ lobeChat.getPluginPayload().then((payload) => {
 
 Used to retrieve the content of the plugin message (`content` field).
 
-LobeChat serializes the message object returned by the plugin and stores it in the `content` field.This method retrieves the content of this field and deserializes it into a JSON object.
+AiPMChat serializes the message object returned by the plugin and stores it in the `content` field.This method retrieves the content of this field and deserializes it into a JSON object.
 
 ```ts
 type GetPluginMessage = <T = object>() => Promise<T>;
@@ -65,7 +65,7 @@ type GetPluginMessage = <T = object>() => Promise<T>;
 #### Example
 
 ```ts | pure
-import { lobeChat } from '@lobehub/chat-plugin-sdk/client';
+import { lobeChat } from '@aipmorg/chat-plugin-sdk/client';
 
 lobeChat.getPluginMessage().then((message) => {
   console.log(message);
@@ -74,7 +74,7 @@ lobeChat.getPluginMessage().then((message) => {
 
 ## setPluginMessage
 
-This method is used to send messages to LobeChat to update the content of the plugin message. The content will be serialized, sent to LobeChat, and the conversation flow will continue.
+This method is used to send messages to AiPMChat to update the content of the plugin message. The content will be serialized, sent to AiPMChat, and the conversation flow will continue.
 
 ```ts
 type SetPluginMessage = <T = object>(content: T) => Promise<void>;
@@ -87,7 +87,7 @@ type SetPluginMessage = <T = object>(content: T) => Promise<void>;
 #### Example
 
 ```ts
-import { lobeChat } from '@lobehub/chat-plugin-sdk/client';
+import { lobeChat } from '@aipmorg/chat-plugin-sdk/client';
 
 lobeChat.setPluginMessage({ title: 'Hello', message: 'Welcome to my plugin' });
 ```
@@ -107,7 +107,7 @@ type GetPluginState = <T = any>(key: string) => Promise<T>;
 #### Example
 
 ```ts
-import { lobeChat } from '@lobehub/chat-plugin-sdk/client';
+import { lobeChat } from '@aipmorg/chat-plugin-sdk/client';
 
 lobeChat.getPluginState('counter').then((state) => {
   console.log(state);
@@ -130,14 +130,14 @@ type SetPluginState = (key: string, value: any) => Promise<void>;
 #### Example
 
 ```ts
-import { lobeChat } from '@lobehub/chat-plugin-sdk/client';
+import { lobeChat } from '@aipmorg/chat-plugin-sdk/client';
 
 lobeChat.setPluginState('counter', 5);
 ```
 
 ## getPluginSettings
 
-Used to retrieve the configuration information stored by the plugin in LobeChat.
+Used to retrieve the configuration information stored by the plugin in AiPMChat.
 
 ```ts
 type GetPluginSettings = <T = any>() => Promise<T>;
@@ -146,7 +146,7 @@ type GetPluginSettings = <T = any>() => Promise<T>;
 #### Example
 
 ```ts
-import { lobeChat } from '@lobehub/chat-plugin-sdk/client';
+import { lobeChat } from '@aipmorg/chat-plugin-sdk/client';
 
 lobeChat.getPluginSettings().then((state) => {
   console.log(state);
@@ -168,7 +168,7 @@ type SetPluginSettings<T> = (settings: Partial<T>) => Promise<void>;
 #### Example
 
 ```ts
-import { lobeChat } from '@lobehub/chat-plugin-sdk/client';
+import { lobeChat } from '@aipmorg/chat-plugin-sdk/client';
 
 lobeChat.setPluginSettings({ theme: 'dark', fontSize: 12 });
 ```

@@ -14,9 +14,9 @@
     "skipLibCheck": true,
     "strict": true,
     "paths": {
-      "@lobehub/chat-plugin-sdk": ["./src"],
-      "@lobehub/chat-plugin-sdk/client": ["./src/client"],
-      "@lobehub/chat-plugin-sdk/openapi": ["./src/openapi"]
+      "@aipmorg/chat-plugin-sdk": ["./src"],
+      "@aipmorg/chat-plugin-sdk/client": ["./src/client"],
+      "@aipmorg/chat-plugin-sdk/openapi": ["./src/openapi"]
     },
     "types": ["vitest/globals"]
   },

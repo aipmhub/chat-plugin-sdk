@@ -4,7 +4,7 @@ group: Schema
 atomId: pluginMetaSchema
 description: 上架到插件市场中的插件元数据的数据模式定义。
 apiHeader:
-  pkg: '@lobehub/chat-plugin-sdk'
+  pkg: '@aipmorg/chat-plugin-sdk'
 ---
 
 插件元数据的 Schema。
@@ -12,7 +12,7 @@ apiHeader:
 ## 使用示例
 
 ```typescript
-import { pluginMetaSchema } from '@lobehub/chat-plugin-sdk';
+import { pluginMetaSchema } from '@aipmorg/chat-plugin-sdk';
 
 const meta = {
   author: 'John Doe',

@@ -2,7 +2,7 @@ import {
   PluginChannel,
   PluginRenderProps,
   useWatchPluginMessage,
-} from '@lobehub/chat-plugin-sdk/client';
+} from '@aipmorg/chat-plugin-sdk/client';
 import { act, renderHook } from '@testing-library/react';
 import { Mock, afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 

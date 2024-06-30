@@ -44,11 +44,11 @@ git clone https://github.com/lobehub/chat-plugin-template.git
 
 - 替换标题：将 `Template` 替换为你的项目名，例如 `Open Interpreter`；
 - 替换图标：将 `package.webp` 替换为你的项目图标名称，你可以在 [emojipedia](https://emojipedia.org/) 上查找满意的图标，或者直接使用 Logo 的 URL；
-- 替换简介：将 `This is the plugin template for LobeChat plugin...` 替换为你的项目一句话介绍；
+- 替换简介：将 `This is the plugin template for AiPMChat plugin...` 替换为你的项目一句话介绍；
 - 替换特性描述：将特性部分替换为你的项目特性描述，可以借助 \[Markdown 特性描述专家]，帮你快速生成美观的特性描述；
 - 替换使用方法：将 usage 部分替换为你的项目使用方法；
 
-完成以上步骤，你就完成了仓库项目基本信息的修改，获得和 LobeChat 官方插件风格气质一致的项目介绍文档。
+完成以上步骤，你就完成了仓库项目基本信息的修改，获得和 AiPMChat 官方插件风格气质一致的项目介绍文档。
 
 ### 3. 全局搜索并替换标记符
 
@@ -58,7 +58,7 @@ git clone https://github.com/lobehub/chat-plugin-template.git
 
 ## 参考项目
 
-当然，你可以使用任何你熟悉的开发框架与开发语言，只要能够实现 manifest 中描述的功能即可。 除了上述模板以外，也可以基于 LobeChat 的官网插件来了解插件开发：
+当然，你可以使用任何你熟悉的开发框架与开发语言，只要能够实现 manifest 中描述的功能即可。 除了上述模板以外，也可以基于 AiPMChat 的官网插件来了解插件开发：
 
 - [chat-plugin-realtime-weather](https://github.com/lobehub/chat-plugin-realtime-weather): 实时天气插件，基于 Next.js 框架开发。
 - [chat-plugin-search-engine](https://github.com/lobehub/chat-plugin-search-engine): 搜索引擎插件，使用 Vercel Serverless Edge Runtime, 前端使用 System.js 模块化开发。

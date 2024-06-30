@@ -5,7 +5,7 @@ nav: API
 order: 11
 group: Hooks
 apiHeader:
-  pkg: '@lobehub/chat-plugin-sdk/client'
+  pkg: '@aipmorg/chat-plugin-sdk/client'
 ---
 
 用于获取读取和更新插件的运行状态。
@@ -33,7 +33,7 @@ const [value, updateValue] = usePluginState<T>(key, initialValue);
 ## 示例
 
 ```tsx | pure
-import { usePluginState } from '@lobehub/chat-plugin-sdk/client';
+import { usePluginState } from '@aipmorg/chat-plugin-sdk/client';
 
 const Demo = () => {
   const [count, setCount] = usePluginState('count', 0);

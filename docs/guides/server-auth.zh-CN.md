@@ -6,7 +6,7 @@ order: 5
 
 # 服务端鉴权
 
-在开发 LobeChat 插件时，服务端鉴权是确保插件安全性的重要环节。本文档旨在指导开发者如何使用不同模式进行鉴权，以保护 API 访问不被未授权使用。
+在开发 AiPMChat 插件时，服务端鉴权是确保插件安全性的重要环节。本文档旨在指导开发者如何使用不同模式进行鉴权，以保护 API 访问不被未授权使用。
 
 ## 简单模式鉴权
 
@@ -53,7 +53,7 @@ order: 5
 
 如果您在实现鉴权时遇到任何问题，或者希望我们支持更多的鉴权方式，请通过以下方式与我们联系：
 
-- 在 GitHub 上创建一个 [新的 issue](https://github.com/lobehub/chat-plugin-sdk/issues/new)
-- 加入我们的 [discord 社区](https://discord.gg/AYFPHvv2jT)，在社群频道和我们反馈。
+- 在 GitHub 上创建一个 [新的 issue](https://github.com/aipmhub/chat-plugin-sdk/issues/new)
+- 加入我们的 [discord 社区](https://discord.gg/sYB5zSyD)，在社群频道和我们反馈。
 
 我们将积极响应您的反馈，并在插件的后续版本中考虑您的需求。

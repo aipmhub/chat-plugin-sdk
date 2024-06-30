@@ -11,21 +11,21 @@ order: 1
 
 # 插件 Manifest
 
-LobeChat 插件 Manifest 是一个关键的配置文件，它用于描述和定义一个 LobeChat 插件的基本信息和行为。Manifest 文件作为插件的 “身份证”，为 LobeChat 平台提供了如何处理和集成该插件的必要信息。
+AiPMChat 插件 Manifest 是一个关键的配置文件，它用于描述和定义一个 AiPMChat 插件的基本信息和行为。Manifest 文件作为插件的 “身份证”，为 AiPMChat 平台提供了如何处理和集成该插件的必要信息。
 
 ## 简介
 
-Manifest 文件通常是以 JSON 格式提供的，以确保 LobeChat 平台能够正确解析和使用插件：
+Manifest 文件通常是以 JSON 格式提供的，以确保 AiPMChat 平台能够正确解析和使用插件：
 
-- **标识插件**: Manifest 包含了插件的唯一标识符 ( `identifier` )，这个标识符用于在 LobeChat 平台中区分不同的插件。
-- **配置元数据**: 插件的元数据 ( `meta` )，如标题、描述、标签和头像，用于在 LobeChat 的用户界面中展示插件的信息，帮助用户理解插件的用途。
+- **标识插件**: Manifest 包含了插件的唯一标识符 ( `identifier` )，这个标识符用于在 AiPMChat 平台中区分不同的插件。
+- **配置元数据**: 插件的元数据 ( `meta` )，如标题、描述、标签和头像，用于在 AiPMChat 的用户界面中展示插件的信息，帮助用户理解插件的用途。
 - **设定插件描述**: 通过指定系统设定 ( `systemRole` )，我们可以设定插件的描述信息，以便模型能够更好地理解插件的功能和用途。
-- **定义接口**: 通过在 Manifest 中声明 API 接口 ( `api` )，插件可以清晰地告诉 LobeChat 平台它能够提供哪些功能和服务。
-- **指定 UI 展示**: 插件的 UI 配置 ( `ui` ) 决定了插件如何在 LobeChat 中显示，包括其模式、尺寸和加载的 URL。
+- **定义接口**: 通过在 Manifest 中声明 API 接口 ( `api` )，插件可以清晰地告诉 AiPMChat 平台它能够提供哪些功能和服务。
+- **指定 UI 展示**: 插件的 UI 配置 ( `ui` ) 决定了插件如何在 AiPMChat 中显示，包括其模式、尺寸和加载的 URL。
 
 ## Manifest Schema
 
-LobeChat 的插件系统允许开发者使用 Manifest 文件定义插件的配置和行为。 下面是 Manifest 文件的详细结构说明。
+AiPMChat 的插件系统允许开发者使用 Manifest 文件定义插件的配置和行为。 下面是 Manifest 文件的详细结构说明。
 
 manifest 是一个 JSON 文件，其中包含以下字段：
 
@@ -60,7 +60,7 @@ manifest 是一个 JSON 文件，其中包含以下字段：
 
 ```json
 {
-  "$schema": "../node_modules/@lobehub/chat-plugin-sdk/schema.json",
+  "$schema": "../node_modules/@aipmorg/chat-plugin-sdk/schema.json",
   "api": [
     {
       "url": "http://localhost:3400/api/clothes",

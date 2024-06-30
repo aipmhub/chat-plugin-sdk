@@ -7,14 +7,14 @@ nav: API
 order: 100
 ---
 
-LobeChat includes all error types in plugin service requests, including semantic errors, client errors, and server errors.
+AiPMChat includes all error types in plugin service requests, including semantic errors, client errors, and server errors.
 
 ## Usage
 
 Combined with `createErrorResponse` :
 
 ```ts
-import { PluginErrorType } from '@lobehub/chat-plugin-sdk';
+import { PluginErrorType } from '@aipmorg/chat-plugin-sdk';
 
 export default async (req: Request) => {
   if (req.method !== 'POST') return createErrorResponse(PluginErrorType.MethodNotAllowed);

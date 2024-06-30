@@ -6,11 +6,11 @@ order: 6
 
 # JavaScript Server
 
-When developing LobeChat plugins, you may need a server to handle requests and send responses. This document will guide you through developing plugins on the server using JavaScript and recommend using the Vercel platform for deployment.
+When developing AiPMChat plugins, you may need a server to handle requests and send responses. This document will guide you through developing plugins on the server using JavaScript and recommend using the Vercel platform for deployment.
 
 ## Vercel as a Server Platform
 
-[Vercel](https://vercel.com/) is a cloud platform that provides simple deployment and hosting services, suitable for static websites and server-side applications. For LobeChat plugin development, the following features of Vercel are very useful:
+[Vercel](https://vercel.com/) is a cloud platform that provides simple deployment and hosting services, suitable for static websites and server-side applications. For AiPMChat plugin development, the following features of Vercel are very useful:
 
 - **Simple deployment process**: You can deploy your code to the cloud in a few simple steps.
 - **Custom domain support**: Vercel allows you to associate your service with a custom domain.
@@ -23,7 +23,7 @@ Edge Runtime is an execution environment provided by Vercel, allowing your code 
 Here is an example of a plugin server using Edge Runtime:
 
 ```ts
-import { PluginErrorType, createErrorResponse } from '@lobehub/chat-plugin-sdk';
+import { PluginErrorType, createErrorResponse } from '@aipmorg/chat-plugin-sdk';
 
 import { manClothes, womanClothes } from '@/data';
 import { RequestData, ResponseData } from '@/type';
@@ -78,4 +78,4 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
 In this example, the server handles POST requests and processes the request content using a utility function `fetchContent`, then returns the processed result.
 
-Whether you choose Edge Runtime or Node Runtime, Vercel provides a convenient deployment and runtime environment for LobeChat plugin server development. You can choose the appropriate execution environment based on your needs and familiar technology stack, and leverage the advantages of Vercel to enhance user experience.
+Whether you choose Edge Runtime or Node Runtime, Vercel provides a convenient deployment and runtime environment for AiPMChat plugin server development. You can choose the appropriate execution environment based on your needs and familiar technology stack, and leverage the advantages of Vercel to enhance user experience.

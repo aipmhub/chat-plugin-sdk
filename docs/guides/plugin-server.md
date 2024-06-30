@@ -5,15 +5,15 @@ group:
   order: 3
 ---
 
-# Overview of LobeChat Plugin Server
+# Overview of AiPMChat Plugin Server
 
-The LobeChat plugin server is an essential part of the plugin ecosystem, carrying the core logic for interacting with the LobeChat main body. The main responsibilities of the server include handling requests, executing business logic, authentication verification, and communicating with the plugin gateway. Below is a high-level overview of what the plugin server should include.
+The AiPMChat plugin server is an essential part of the plugin ecosystem, carrying the core logic for interacting with the AiPMChat main body. The main responsibilities of the server include handling requests, executing business logic, authentication verification, and communicating with the plugin gateway. Below is a high-level overview of what the plugin server should include.
 
 ## Key Components and Functions
 
 ### Request Handling and Business Logic
 
-- **Request Reception**: Capable of receiving HTTP requests from LobeChat or the plugin gateway.
+- **Request Reception**: Capable of receiving HTTP requests from AiPMChat or the plugin gateway.
 - **Logic Execution**: Executes specific business logic, such as data processing and external service calls.
 - **Response Return**: Returns structured response data based on the execution result of the business logic.
 
@@ -35,7 +35,7 @@ The LobeChat plugin server is an essential part of the plugin ecosystem, carryin
 ### OpenAPI Schema Integration (Optional)
 
 - **Interface Definition**: Precisely defines the plugin's API interface using OpenAPI Schema, including paths, methods, parameters, and response formats.
-- **Documentation**: Provides clear API documentation, enabling LobeChat to automatically recognize and seamlessly integrate with the plugin server.
+- **Documentation**: Provides clear API documentation, enabling AiPMChat to automatically recognize and seamlessly integrate with the plugin server.
 
 ### Authentication and Security (Optional)
 

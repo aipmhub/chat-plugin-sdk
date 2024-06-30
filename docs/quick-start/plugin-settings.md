@@ -32,7 +32,7 @@ For example, in the [manifest](https://github.com/lobehub/chat-plugin-search-eng
 }
 ```
 
-After enabling this plugin, LobeChat will display an input box for entering the SerpAPI API Key, as shown in the image below:
+After enabling this plugin, AiPMChat will display an input box for entering the SerpAPI API Key, as shown in the image below:
 
 ![](https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265733057-9043ce79-0e78-40bc-98fa-be594eaa9212.png)
 
@@ -45,7 +45,7 @@ import {
   PluginErrorType,
   createErrorResponse,
   getPluginSettingsStringFromRequest,
-} from '@lobehub/chat-plugin-sdk';
+} from '@aipmorg/chat-plugin-sdk';
 
 export default async (req: Request) => {
   // Obtain the settings information

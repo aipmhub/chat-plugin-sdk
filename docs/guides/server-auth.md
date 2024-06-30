@@ -6,7 +6,7 @@ order: 5
 
 # Server Authentication
 
-When developing LobeChat plugins, server authentication is an important step to ensure the security of the plugin. This document aims to guide developers on how to use different modes for authentication to protect API access from unauthorized use.
+When developing AiPMChat plugins, server authentication is an important step to ensure the security of the plugin. This document aims to guide developers on how to use different modes for authentication to protect API access from unauthorized use.
 
 ## Simple Authentication Mode
 
@@ -53,7 +53,7 @@ Currently, our OpenAPI authentication implementation may not be perfect. If you 
 
 If you encounter any problems during authentication implementation or wish for us to support more authentication methods, please contact us through the following channels:
 
-- Create a [new issue](https://github.com/lobehub/chat-plugin-sdk/issues/new) on GitHub
-- Join our [Discord community](https://discord.gg/AYFPHvv2jT) and provide feedback in the community channel.
+- Create a [new issue](https://github.com/aipmhub/chat-plugin-sdk/issues/new) on GitHub
+- Join our [Discord community](https://discord.gg/sYB5zSyD) and provide feedback in the community channel.
 
 We will actively respond to your feedback and consider your requirements in subsequent versions of the plugin.

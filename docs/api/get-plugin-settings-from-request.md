@@ -31,7 +31,7 @@ The return value is `T | undefined`, which represents the plugin settings string
 import {
   createHeadersWithPluginSettings,
   getPluginSettingsFromRequest,
-} from '@lobehub/chat-plugin-sdk';
+} from '@aipmorg/chat-plugin-sdk';
 
 const req = new Request('https://api.example.com', {
   headers: createHeadersWithPluginSettings({ theme: 'dark' }),

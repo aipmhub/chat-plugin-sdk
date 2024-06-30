@@ -1,4 +1,4 @@
-import { PluginChannel, lobeChat } from '@lobehub/chat-plugin-sdk/client';
+import { PluginChannel, lobeChat } from '@aipmorg/chat-plugin-sdk/client';
 import { Mock, afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 // Mock window and postMessage before each test

@@ -60,7 +60,7 @@ export interface LobeChatPluginManifest {
    * Plugin name
    * @desc The name of the plugin
    * @nameCN 插件名称
-   * @descCN 插件的名称，需要和提交到 LobeChat Plugins 仓库的插件名称一致
+   * @descCN 插件的名称，需要和提交到 AiPMChat Plugins 仓库的插件名称一致
    */
   identifier: string;
   /**

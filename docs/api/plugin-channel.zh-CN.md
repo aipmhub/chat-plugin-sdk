@@ -10,12 +10,12 @@ nav:
   title: API
   order: 100
 apiHeader:
-  pkg: '@lobehub/chat-plugin-sdk'
+  pkg: '@aipmorg/chat-plugin-sdk'
 ---
 
 # PluginChannel 通信消息
 
-一般来说你可能用不到 `PluginChannel` ，但如果你希望使用 LobeChat 底层的消息通信机制，你可能需要了解这些消息类型。 本文档包含了通信消息类型的详细说明。
+一般来说你可能用不到 `PluginChannel` ，但如果你希望使用 AiPMChat 底层的消息通信机制，你可能需要了解这些消息类型。 本文档包含了通信消息类型的详细说明。
 
 ## 初始化
 
@@ -23,10 +23,10 @@ apiHeader:
 
 - 字面量：`lobe-chat:plugin-ready-for-render`
 
-用于通知 LobeChat 主体，插件已准备好进行渲染的通道
+用于通知 AiPMChat 主体，插件已准备好进行渲染的通道
 
 ```ts
-import { PluginChannel } from '@lobehub/chat-plugin-sdk';
+import { PluginChannel } from '@aipmorg/chat-plugin-sdk';
 
 const channel = PluginChannel.pluginReadyForRender;
 ```
@@ -39,10 +39,10 @@ const channel = PluginChannel.pluginReadyForRender;
 
 - 字面量：`lobe-chat:init-standalone-plugin`
 
-针对 `standalone` 类型的插件，通知 LobeChat 插件已经初始化的通道
+针对 `standalone` 类型的插件，通知 AiPMChat 插件已经初始化的通道
 
 ```ts
-import { PluginChannel } from '@lobehub/chat-plugin-sdk';
+import { PluginChannel } from '@aipmorg/chat-plugin-sdk';
 
 const channel = PluginChannel.initStandalonePlugin;
 ```
@@ -53,10 +53,10 @@ const channel = PluginChannel.initStandalonePlugin;
 
 - 字面量：`lobe-chat:fetch-plugin-messag`
 
-用于插件主动向 LobeChat 发起消息请求的通道
+用于插件主动向 AiPMChat 发起消息请求的通道
 
 ```ts
-import { PluginChannel } from '@lobehub/chat-plugin-sdk';
+import { PluginChannel } from '@aipmorg/chat-plugin-sdk';
 
 const channel = PluginChannel.fetchPluginMessage;
 ```
@@ -68,7 +68,7 @@ const channel = PluginChannel.fetchPluginMessage;
 用于主程序向插件发送渲染指令的通道。
 
 ```ts
-import { PluginChannel } from '@lobehub/chat-plugin-sdk';
+import { PluginChannel } from '@aipmorg/chat-plugin-sdk';
 
 const channel = PluginChannel.pluginReadyForRender;
 ```
@@ -77,10 +77,10 @@ const channel = PluginChannel.pluginReadyForRender;
 
 - 字面量：`lobe-chat:fill-plugin-content`
 
-用于在插件独立运行时，向 LobeChat 发送填充插件内容的通道
+用于在插件独立运行时，向 AiPMChat 发送填充插件内容的通道
 
 ```ts
-import { PluginChannel } from '@lobehub/chat-plugin-sdk';
+import { PluginChannel } from '@aipmorg/chat-plugin-sdk';
 
 const channel = PluginChannel.fillStandalonePluginContent;
 ```
@@ -91,10 +91,10 @@ const channel = PluginChannel.fillStandalonePluginContent;
 
 - 字面量：`lobe-chat:fetch-plugin-state`
 
-用于插件主动向 LobeChat 请求获取插件的状态信息的通道
+用于插件主动向 AiPMChat 请求获取插件的状态信息的通道
 
 ```ts
-import { PluginChannel } from '@lobehub/chat-plugin-sdk';
+import { PluginChannel } from '@aipmorg/chat-plugin-sdk';
 
 const channel = PluginChannel.fetchPluginState;
 ```
@@ -106,7 +106,7 @@ const channel = PluginChannel.fetchPluginState;
 用于主程序向插件发送渲染插件状态的通道。
 
 ```ts
-import { PluginChannel } from '@lobehub/chat-plugin-sdk';
+import { PluginChannel } from '@aipmorg/chat-plugin-sdk';
 
 const channel = PluginChannel.renderPluginState;
 ```
@@ -115,10 +115,10 @@ const channel = PluginChannel.renderPluginState;
 
 - 字面量：`lobe-chat:update-plugin-state`
 
-用于插件向 LobeChat 发送更新插件状态的通道。
+用于插件向 AiPMChat 发送更新插件状态的通道。
 
 ```ts
-import { PluginChannel } from '@lobehub/chat-plugin-sdk';
+import { PluginChannel } from '@aipmorg/chat-plugin-sdk';
 
 const channel = PluginChannel.updatePluginState;
 ```
@@ -129,10 +129,10 @@ const channel = PluginChannel.updatePluginState;
 
 - 字面量：`lobe-chat:fetch-plugin-settings`
 
-用于插件主动向 LobeChat 请求获取插件的设置信息的通道
+用于插件主动向 AiPMChat 请求获取插件的设置信息的通道
 
 ```ts
-import { PluginChannel } from '@lobehub/chat-plugin-sdk';
+import { PluginChannel } from '@aipmorg/chat-plugin-sdk';
 
 const channel = PluginChannel.fetchPluginSettings;
 ```
@@ -144,7 +144,7 @@ const channel = PluginChannel.fetchPluginSettings;
 用于主程序向插件发送渲染插件设置的通道。
 
 ```ts
-import { PluginChannel } from '@lobehub/chat-plugin-sdk';
+import { PluginChannel } from '@aipmorg/chat-plugin-sdk';
 
 const channel = PluginChannel.renderPluginSettings;
 ```
@@ -153,10 +153,10 @@ const channel = PluginChannel.renderPluginSettings;
 
 - 字面量：`lobe-chat:update-plugin-settings`
 
-用于插件向 LobeChat 发送更新插件设置的通道。
+用于插件向 AiPMChat 发送更新插件设置的通道。
 
 ```ts
-import { PluginChannel } from '@lobehub/chat-plugin-sdk';
+import { PluginChannel } from '@aipmorg/chat-plugin-sdk';
 
 const channel = PluginChannel.updatePluginSettings;
 ```

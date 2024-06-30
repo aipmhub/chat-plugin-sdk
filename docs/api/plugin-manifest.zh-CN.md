@@ -4,7 +4,7 @@ group: Schema
 atomId: pluginManifestSchema
 description: 插件描述文件的 Schema
 apiHeader:
-  pkg: '@lobehub/chat-plugin-sdk'
+  pkg: '@aipmorg/chat-plugin-sdk'
 ---
 
 ## pluginManifestSchema
@@ -14,7 +14,7 @@ apiHeader:
 ### 使用示例
 
 ```typescript
-import { pluginManifestSchema } from '@lobehub/chat-plugin-sdk';
+import { pluginManifestSchema } from '@aipmorg/chat-plugin-sdk';
 
 const manifestData = {
   api: [
@@ -75,7 +75,7 @@ export default pluginApiSchema;
 ### 使用示例
 
 ```typescript
-import { pluginApiSchema } from '@lobehub/chat-plugin-sdk';
+import { pluginApiSchema } from '@aipmorg/chat-plugin-sdk';
 
 const apiData = {
   description: 'API 描述',

@@ -6,7 +6,7 @@ order: 3
 
 # Plugin UI Interface
 
-For LobeChat plugins, the UI interface is optional. For example, the [Web Content Extraction](https://github.com/lobehub/chat-plugin-web-crawler) plugin does not have a corresponding user interface.
+For AiPMChat plugins, the UI interface is optional. For example, the [Web Content Extraction](https://github.com/lobehub/chat-plugin-web-crawler) plugin does not have a corresponding user interface.
 
 ![](https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265263241-0e765fdc-3463-4c36-a398-aef177a30df9.png)
 
@@ -16,7 +16,7 @@ If you wish to display more enriched information in plugin messages, or include 
 
 ## Implementing UI Interface
 
-LobeChat implements plugin UI loading and communication through `iframe` + `postMessage`. Therefore, the implementation of the plugin UI is consistent with regular web development. You can use any frontend framework and development language that you are familiar with.
+AiPMChat implements plugin UI loading and communication through `iframe` + `postMessage`. Therefore, the implementation of the plugin UI is consistent with regular web development. You can use any frontend framework and development language that you are familiar with.
 
 ![](https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265263653-4ea87abc-249a-49f3-a241-7ed93ddb1ddf.png)
 
@@ -24,14 +24,14 @@ In the template we provide, we use React + Next.js + antd as the frontend interf
 
 ## Plugin Communication
 
-Regarding plugin communication, we provide two methods to achieve bidirectional communication between the plugin and the LobeChat core.
+Regarding plugin communication, we provide two methods to achieve bidirectional communication between the plugin and the AiPMChat core.
 
 ### Plugin Initiative Request
 
-You can actively request data from LobeChat through the `getPluginMessage` method of [lobeChat](/api/lobe-chat-client).
+You can actively request data from AiPMChat through the `getPluginMessage` method of [lobeChat](/api/lobe-chat-client).
 
 ```tsx | pure
-import { lobeChat } from '@lobehub/chat-plugin-sdk/client';
+import { lobeChat } from '@aipmorg/chat-plugin-sdk/client';
 import { memo, useEffect, useState } from 'react';
 
 import { ResponseData } from '@/type';
@@ -40,7 +40,7 @@ const Render = memo(() => {
   const [data, setData] = useState<ResponseData>();
 
   useEffect(() => {
-    // Get the current message of the plugin from LobeChat
+    // Get the current message of the plugin from AiPMChat
     lobeChat.getPluginMessage().then((e: ResponseData) => {
       setData(e);
     });
@@ -56,12 +56,12 @@ export default Render;
 The `lobeChat.getPluginMessage` method is a regular asynchronous request method, so it can be used with `swr` or `react-query` to implement data caching and automatic updates for a better user experience.
 :::
 
-### Receive LobeChat Push
+### Receive AiPMChat Push
 
-You can subscribe to messages sent from LobeChat to the plugin using the [useWatchPluginMessage](/api/use-watch-plugin-message) method.
+You can subscribe to messages sent from AiPMChat to the plugin using the [useWatchPluginMessage](/api/use-watch-plugin-message) method.
 
 ```tsx | pure
-import { useWatchPluginMessage } from '@lobehub/chat-plugin-sdk/client';
+import { useWatchPluginMessage } from '@aipmorg/chat-plugin-sdk/client';
 
 const Demo = () => {
   const { data, loading } = useWatchPluginMessage();

@@ -10,7 +10,7 @@ Schema for plugin metadata.
 ## Usage Example
 
 ```typescript
-import { pluginMetaSchema } from '@lobehub/chat-plugin-sdk';
+import { pluginMetaSchema } from '@aipmorg/chat-plugin-sdk';
 
 const meta = {
   author: 'John Doe',

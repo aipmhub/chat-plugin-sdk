@@ -1,4 +1,4 @@
-import { lobeChat, usePluginState } from '@lobehub/chat-plugin-sdk/client';
+import { lobeChat, usePluginState } from '@aipmorg/chat-plugin-sdk/client';
 import { act, renderHook } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 

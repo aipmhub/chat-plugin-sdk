@@ -1,4 +1,4 @@
-import { OpenAPIConvertor } from '@lobehub/chat-plugin-sdk/openapi';
+import { OpenAPIConvertor } from '@aipmorg/chat-plugin-sdk/openapi';
 import { describe, expect, it } from 'vitest';
 
 import ChatWithPDF from './fixtures/ChatWithPDF.json';

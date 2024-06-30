@@ -12,7 +12,7 @@ Taking the [manifest](https://github.com/lobehub/chat-plugin-template/blob/main/
 
 ```json
 {
-  "$schema": "../node_modules/@lobehub/chat-plugin-sdk/schema.json",
+  "$schema": "../node_modules/@aipmorg/chat-plugin-sdk/schema.json",
   "api": [
     {
       "url": "http://localhost:3400/api/clothes",
@@ -108,11 +108,11 @@ In our provided template example, the API interface corresponds to the `recommen
 
 ## `ui`
 
-This field contains information about the plugin's user interface, indicating where LobeChat can load the plugin's frontend interface from. Since the loading of plugin interfaces in LobeChat is based on iframes, the height and width of the plugin interface can be specified as needed.
+This field contains information about the plugin's user interface, indicating where AiPMChat can load the plugin's frontend interface from. Since the loading of plugin interfaces in AiPMChat is based on iframes, the height and width of the plugin interface can be specified as needed.
 
 ## `gateway`
 
-This field specifies the gateway for LobeChat to query the plugin's API interface. LobeChat's default plugin gateway is a cloud-based service, and custom plugin requests need to be sent to a local service. By specifying the gateway in the manifest, LobeChat will directly request this address and access the local plugin service. Published online plugins may omit this field.
+This field specifies the gateway for AiPMChat to query the plugin's API interface. AiPMChat's default plugin gateway is a cloud-based service, and custom plugin requests need to be sent to a local service. By specifying the gateway in the manifest, AiPMChat will directly request this address and access the local plugin service. Published online plugins may omit this field.
 
 ## API and Schema
 
@@ -141,7 +141,7 @@ The `$schema` field of `manifest-dev.json` can be configured with a relative pat
 
 ```json filename=manifest-dev.json
 {
-  "$schema": "../node_modules/@lobehub/chat-plugin-sdk/schema.json",
+  "$schema": "../node_modules/@aipmorg/chat-plugin-sdk/schema.json",
   "api": [],
   "gateway": "http://localhost:3400/api/gateway",
   "identifier": "plugin-identifier",

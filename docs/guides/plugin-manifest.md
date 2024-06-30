@@ -11,21 +11,21 @@ order: 1
 
 # Plugin Manifest
 
-The LobeChat Plugin Manifest is a crucial configuration file used to describe and define the basic information and behavior of a LobeChat plugin. The Manifest file serves as the "identity card" of the plugin, providing the necessary information for the LobeChat platform to handle and integrate the plugin.
+The AiPMChat Plugin Manifest is a crucial configuration file used to describe and define the basic information and behavior of a AiPMChat plugin. The Manifest file serves as the "identity card" of the plugin, providing the necessary information for the AiPMChat platform to handle and integrate the plugin.
 
 ## Introduction
 
-The Manifest file is typically provided in JSON format to ensure that the LobeChat platform can correctly parse and use the plugin:
+The Manifest file is typically provided in JSON format to ensure that the AiPMChat platform can correctly parse and use the plugin:
 
-- **Identify the plugin**: The Manifest contains the unique identifier (`identifier`) of the plugin, which is used to distinguish different plugins within the LobeChat platform.
-- **Configure metadata**: The plugin's metadata (`meta`), such as title, description, tags, and avatar, is used to display the plugin's information in the LobeChat user interface, helping users understand the purpose of the plugin.
+- **Identify the plugin**: The Manifest contains the unique identifier (`identifier`) of the plugin, which is used to distinguish different plugins within the AiPMChat platform.
+- **Configure metadata**: The plugin's metadata (`meta`), such as title, description, tags, and avatar, is used to display the plugin's information in the AiPMChat user interface, helping users understand the purpose of the plugin.
 - **Set plugin description**: By specifying the system role (`systemRole`), we can set the plugin's description to help the model better understand the functionality and purpose of the plugin.
-- **Define interfaces**: By declaring API interfaces (`api`) in the Manifest, the plugin can clearly inform the LobeChat platform about the functionality and services it can provide.
-- **Specify UI display**: The plugin's UI configuration (`ui`) determines how the plugin is displayed in LobeChat, including its mode, size, and the URL to load.
+- **Define interfaces**: By declaring API interfaces (`api`) in the Manifest, the plugin can clearly inform the AiPMChat platform about the functionality and services it can provide.
+- **Specify UI display**: The plugin's UI configuration (`ui`) determines how the plugin is displayed in AiPMChat, including its mode, size, and the URL to load.
 
 ## Manifest Schema
 
-The LobeChat plugin system allows developers to define the configuration and behavior of plugins using the Manifest file. Below is a detailed description of the structure of the Manifest file.
+The AiPMChat plugin system allows developers to define the configuration and behavior of plugins using the Manifest file. Below is a detailed description of the structure of the Manifest file.
 
 The manifest is a JSON file containing the following fields:
 
@@ -60,7 +60,7 @@ An example is as follows:
 
 ```json
 {
-  "$schema": "../node_modules/@lobehub/chat-plugin-sdk/schema.json",
+  "$schema": "../node_modules/@aipmorg/chat-plugin-sdk/schema.json",
   "api": [
     {
       "url": "http://localhost:3400/api/clothes",

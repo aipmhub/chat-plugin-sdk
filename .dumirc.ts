@@ -5,10 +5,10 @@ import { homepage } from './package.json';
 const isWin = process.platform === 'win32';
 
 const themeConfig = {
-  footer: 'Made with 🤯 by LobeHub',
-  name: 'Lobe Chat Plugin SDK',
+  footer: 'Made with 🌿 by AiPMHub',
+  name: 'AiPM Chat Plugin SDK',
   socialLinks: {
-    discord: 'https://discord.gg/AYFPHvv2jT',
+    discord: 'https://discord.gg/sYB5zSyD',
     github: homepage,
   },
 };
@@ -33,5 +33,5 @@ export default defineConfig({
   }`,
   ],
   themeConfig,
-  title: 'Lobe Chat Plugin SDK',
+  title: 'AiPM Chat Plugin SDK',
 });

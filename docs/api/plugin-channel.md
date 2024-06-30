@@ -13,7 +13,7 @@ nav:
 
 # PluginChannel Communication Messages
 
-You may not need to use `PluginChannel` , but if you want to use the underlying message communication mechanism of LobeChat, you may need to understand these message types. This document contains detailed explanations of communication message types.
+You may not need to use `PluginChannel` , but if you want to use the underlying message communication mechanism of AiPMChat, you may need to understand these message types. This document contains detailed explanations of communication message types.
 
 ## Initialization
 
@@ -21,10 +21,10 @@ You may not need to use `PluginChannel` , but if you want to use the underlying 
 
 - Literal:`lobe-chat:plugin-ready-for-render`
 
-Used to notify the LobeChat host that the plugin is ready for rendering
+Used to notify the AiPMChat host that the plugin is ready for rendering
 
 ```ts
-import { PluginChannel } from '@lobehub/chat-plugin-sdk';
+import { PluginChannel } from '@aipmorg/chat-plugin-sdk';
 
 const channel = PluginChannel.pluginReadyForRender;
 ```
@@ -37,10 +37,10 @@ The main program will send information about the plugin through the `renderPlugi
 
 - Literal:`lobe-chat:init-standalone-plugin`
 
-For plugins of type `standalone`, notifies LobeChat that the plugin has been initialized
+For plugins of type `standalone`, notifies AiPMChat that the plugin has been initialized
 
 ```ts
-import { PluginChannel } from '@lobehub/chat-plugin-sdk';
+import { PluginChannel } from '@aipmorg/chat-plugin-sdk';
 
 const channel = PluginChannel.initStandalonePlugin;
 ```
@@ -51,10 +51,10 @@ const channel = PluginChannel.initStandalonePlugin;
 
 - Literal:`lobe-chat:fetch-plugin-messag`
 
-Used for the plugin to initiate a message request to LobeChat
+Used for the plugin to initiate a message request to AiPMChat
 
 ```ts
-import { PluginChannel } from '@lobehub/chat-plugin-sdk';
+import { PluginChannel } from '@aipmorg/chat-plugin-sdk';
 
 const channel = PluginChannel.fetchPluginMessage;
 ```
@@ -66,7 +66,7 @@ const channel = PluginChannel.fetchPluginMessage;
 Used for the main program to send rendering instructions to the plugin.
 
 ```ts
-import { PluginChannel } from '@lobehub/chat-plugin-sdk';
+import { PluginChannel } from '@aipmorg/chat-plugin-sdk';
 
 const channel = PluginChannel.pluginReadyForRender;
 ```
@@ -75,10 +75,10 @@ const channel = PluginChannel.pluginReadyForRender;
 
 - Literal:`lobe-chat:fill-plugin-content`
 
-Used to send plugin content to LobeChat when the plugin is running independently
+Used to send plugin content to AiPMChat when the plugin is running independently
 
 ```ts
-import { PluginChannel } from '@lobehub/chat-plugin-sdk';
+import { PluginChannel } from '@aipmorg/chat-plugin-sdk';
 
 const channel = PluginChannel.fillStandalonePluginContent;
 ```
@@ -89,10 +89,10 @@ const channel = PluginChannel.fillStandalonePluginContent;
 
 - Literal:`lobe-chat:fetch-plugin-state`
 
-Used for the plugin to actively request plugin state information from LobeChat
+Used for the plugin to actively request plugin state information from AiPMChat
 
 ```ts
-import { PluginChannel } from '@lobehub/chat-plugin-sdk';
+import { PluginChannel } from '@aipmorg/chat-plugin-sdk';
 
 const channel = PluginChannel.fetchPluginState;
 ```
@@ -104,7 +104,7 @@ const channel = PluginChannel.fetchPluginState;
 Used for the main program to render plugin state to the plugin
 
 ```ts
-import { PluginChannel } from '@lobehub/chat-plugin-sdk';
+import { PluginChannel } from '@aipmorg/chat-plugin-sdk';
 
 const channel = PluginChannel.renderPluginState;
 ```
@@ -113,10 +113,10 @@ const channel = PluginChannel.renderPluginState;
 
 - Literal:`lobe-chat:update-plugin-state`
 
-Used for the plugin to send updated plugin state to LobeChat
+Used for the plugin to send updated plugin state to AiPMChat
 
 ```ts
-import { PluginChannel } from '@lobehub/chat-plugin-sdk';
+import { PluginChannel } from '@aipmorg/chat-plugin-sdk';
 
 const channel = PluginChannel.updatePluginState;
 ```
@@ -127,10 +127,10 @@ const channel = PluginChannel.updatePluginState;
 
 - Literal:`lobe-chat:fetch-plugin-settings`
 
-Used for the plugin to actively request plugin settings information from LobeChat
+Used for the plugin to actively request plugin settings information from AiPMChat
 
 ```ts
-import { PluginChannel } from '@lobehub/chat-plugin-sdk';
+import { PluginChannel } from '@aipmorg/chat-plugin-sdk';
 
 const channel = PluginChannel.fetchPluginSettings;
 ```
@@ -142,7 +142,7 @@ const channel = PluginChannel.fetchPluginSettings;
 Used for the main program to render plugin settings to the plugin
 
 ```ts
-import { PluginChannel } from '@lobehub/chat-plugin-sdk';
+import { PluginChannel } from '@aipmorg/chat-plugin-sdk';
 
 const channel = PluginChannel.renderPluginSettings;
 ```
@@ -151,10 +151,10 @@ const channel = PluginChannel.renderPluginSettings;
 
 - Literal:`lobe-chat:update-plugin-settings`
 
-Used for the plugin to send updated plugin settings to LobeChat
+Used for the plugin to send updated plugin settings to AiPMChat
 
 ```ts
-import { PluginChannel } from '@lobehub/chat-plugin-sdk';
+import { PluginChannel } from '@aipmorg/chat-plugin-sdk';
 
 const channel = PluginChannel.updatePluginSettings;
 ```
